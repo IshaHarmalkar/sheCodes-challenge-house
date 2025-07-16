@@ -72,13 +72,10 @@
         font-family: Georgia, "Times New Roman", Times, serif;
         color: #4b4b4b;
       }
-
       .image-container {
         position: relative;
         width: 100%;
         height: auto;
-        margin: 0;
-        padding: 0;
       }
 
       .image-container img {
@@ -87,46 +84,34 @@
         display: block;
       }
 
-      .centered-text {
+      .overlay-text {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 2.5rem;
-
-        color: white;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         text-align: center;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
       }
 
       .top-text {
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 90%;
-        font-size: 1.5rem;
-
+        font-size: clamp(1rem, 2.5vw, 1.4rem);
         color: white;
-        text-align: center;
-        white-space: normal;
-        line-height: 1.4;
-        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
-      }
-      .bg-1 {
-        background-color: #e53557;
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+        max-width: 90%;
+        word-wrap: break-word;
+        margin-top: 1rem;
       }
 
-      .bg-2 {
-        background-color: #e4f9e5;
-      }
-
-      .bg-11 {
-        background-color: #029244;
-      }
-
-      .bg-12 {
-        background-color: #9eb7a2;
+      .centered-text {
+        font-size: clamp(1.5rem, 5vw, 3rem);
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        margin-bottom: 2rem;
       }
 
       .section-heading {
@@ -208,11 +193,13 @@
                 alt="House"
                 class="img-fluid"
               />
-              <div class="top-text">
-                THE JOY OF WALKING QUIETLY THROUGH YOUR DAYS, FEELING YOUR LIFE
-                GENTLY WRAP AROUND YOU
+              <div class="overlay-text">
+                <div class="top-text">
+                  THE JOY OF WALKING QUIETLY THROUGH YOUR DAYS, FEELING YOUR
+                  LIFE GENTLY WRAP AROUND YOU
+                </div>
+                <div class="centered-text">DREAM HOUSE</div>
               </div>
-              <div class="centered-text">DREAM HOUSE</div>
             </div>
           </div>
 

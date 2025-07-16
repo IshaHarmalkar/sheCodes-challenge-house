@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Lexend+Tera:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <style>
+      /*
+        .lexend-tera-<uniquifier> {
+          font-family: "Lexend Tera", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: <weight>;
+          font-style: normal;
+        } */
+
+      .gideon-roman-regular {
+        font-family: "Gideon Roman", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body {
+        background-color: #f7f3e8;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+
+      .nav-bar {
+        color: grey;
+      }
+
+      .nav-link {
+        color: #4b4b4b;
+        font-family: "Lexend Tera", sans-serif;
+        /* font-weight: 200; */
+        font-size: small;
+      }
+
+      .sub-text {
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+      }
+
+      .main-text {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: #4b4b4b;
+      }
+
+      .image-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .centered-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2.5rem;
+
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+      }
+
+      .top-text {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 90%;
+        font-size: 1.5rem;
+
+        color: white;
+        text-align: center;
+        white-space: normal;
+        line-height: 1.4;
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+      }
+      .bg-1 {
+        background-color: #e53557;
+      }
+
+      .bg-2 {
+        background-color: #e4f9e5;
+      }
+
+      .bg-11 {
+        background-color: #029244;
+      }
+
+      .bg-12 {
+        background-color: #9eb7a2;
+      }
+
+      .section-heading {
+        font-size: 54px;
+        color: #5b5a55;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      .p-text {
+        font-family: "Gideon Roman", serif;
+        color: #5b5a55;
+      }
+
+      .chunk-p-m {
+        margin: 180px 0px;
+      }
+      .room-image {
+        width: 100%;
+        aspect-ratio: 3/4; /* adjust to 16/9 or 1/1 as needed */
+        object-fit: cover;
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        .room-image {
+          aspect-ratio: 3/4;
+        }
+      }
+
+      .room_name {
+        font-family: "Gideon Roman", serif;
+        color: #5b5a55;
+      }
+
+      .bold-hr {
+        /* padding: 0;
+        margin: 0; */
+        color: #029244;
+
+        border: none;
+        height: 20px;
+      }
+    </style>
+
+    <title>Dream House Challenge</title>
+
+    <style></style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav class="nav-bar shadow-sm py-1">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#rooms">Rooms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#motifs-pallet">Motifs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#motifs-pallet">Pallet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#interior">Balcony</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#exterior" aria-disabled="true"
+              >Exterior</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="main-container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="image-container">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/614/original/out.jpg?1752599289"
+                alt="House"
+                class="img-fluid"
+              />
+              <div class="top-text">
+                THE JOY OF WALKING QUIETLY THROUGH YOUR DAYS, FEELING YOUR LIFE
+                GENTLY WRAP AROUND YOU
+              </div>
+              <div class="centered-text">DREAM HOUSE</div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="row py-5 my-5">
+              <div class="col-md-6">
+                <div class="sub-text">
+                  SUNLIT MORNINGS<br />
+                  COOL EVENINGS
+                </div>
+                <div class="main-text">
+                  <h2>
+                    EVERY ROOM TELLS A STORY OF COMFORT. CONNECTION. COMING
+                    HOME.
+                  </h2>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div>
+                  <img
+                    src="
+                    https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/613/original/green_room.jpg?1752599260"
+                    alt="green-room"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <p>
+                This isn't just a house—it's where memories are made and dreams
+                take shape. From the reading nook by the garden window to the
+                kitchen island where friends gather, every space has been
+                imagined with intention. Here, design meets heart to create
+                something truly personal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="rooms" class="chunk-p-m">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="section-heading">ROOMS</div>
+            <div>
+              <p class="p-text">
+                Interior design that truly feels like home goes beyond
+                aesthetics—it’s about crafting a space that reflects your story,
+                your comforts, and your rhythms. It’s the soft lighting that
+                winds down your day, the worn-in armchair that hugs you after a
+                long one, the scent of cedarwood or fresh linen drifting through
+                the air. Thoughtful textures, familiar colors, and meaningful
+                objects—like a hand-me-down quilt or a photo wall—quietly weave
+                memory into every corner. A home-designed interior doesn’t just
+                look beautiful; it breathes with warmth, welcome, and a quiet
+                understanding of what makes you feel grounded.
+              </p>
+            </div>
+            <div>Building A Home, Not A House In The 21st Century</div>
+          </div>
+          <div class="col-md-3">
+            <div>
+              <img
+                src="Rooms/living_room.png"
+                alt="green-room"
+                class="room-image"
+              />
+            </div>
+            <div class="room_name">Living Room</div>
+          </div>
+          <div class="col-md-3">
+            <div>
+              <img
+                src="Rooms/kitchen.jpg"
+                alt="green-room"
+                class="room-image"
+              />
+            </div>
+            <div class="room_name">Kitchen</div>
+          </div>
+          <div class="col-md-3">
+            <div>
+              <img
+                src="Rooms/green_room.jpg"
+                alt="green-room"
+                class="room-image"
+              />
+            </div>
+            <div class="room_name">Bedroom</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 bold-hr">
+            <hr />
+          </div>
+
+          <div class="col-md-3 bold-hr">
+            <hr />
+          </div>
+          <div class="col-md-3">
+            <hr />
+          </div>
+        </div>
+      </section>
+
+      <section id="motifs-pallet" class="chunk-p-m">
+        <div class="row">
+          <div class="section-heading">MOTIFS & PALLETE</div>
+
+          <div class="col-md-3">
+            <div>
+              <img
+                src="
+https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/623/original/stairs.jpg?1752603515"
+                alt="wooden-stairs"
+                class="room-image"
+              />
+            </div>
+            <div class="room_name">Wooden Stairs</div>
+          </div>
+          <div class="col-md-3">
+            <div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/625/original/sink.jpg?1752603560"
+                alt="sink"
+                class="room-image"
+              />
+            </div>
+            <div class="room_name">Sink</div>
+          </div>
+          <div class="col-md-3">
+            <div>
+              <img
+                src="
+https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/628/original/motif.jpg?1752603603"
+                alt="tiled-stairs"
+                class="room-image"
+              />
+            </div>
+            <div class="room_name">Tiled Stairs</div>
+          </div>
+          <div class="col-md-3">
+            <div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/629/original/Tile_-_Indoor.jpg?1752603650"
+                alt="Edge"
+                class="room-image"
+              />
+            </div>
+            <div class="room_name">Tiled Edges</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 bold-hr">
+            <hr />
+          </div>
+
+          <div class="col-md-3 bold-hr">
+            <hr />
+          </div>
+          <div class="col-md-3 bold-hr">
+            <hr />
+          </div>
+          <div class="col-md-3 bold-hr">
+            <hr />
+          </div>
+        </div>
+      </section>
+
+      <section id="interior" class="chunk-p-m">
+        <div class="row">
+          <div class="section-heading">Balcony</div>
+
+          <div class="col-md-3">
+            <div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/633/original/int-4.jpg?1752603729"
+                alt="balcony"
+                class="room-image"
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/632/original/int-3.jpg?1752603720"
+                alt="green-room"
+                class="room-image"
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div>
+              <img
+                src="
+https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/631/original/int-2.jpg?1752603713"
+                alt="green-room"
+                class="room-image"
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/634/original/download_%288%29.jpg?1752603931"
+                alt="green-room"
+                class="room-image"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 bold-hr">
+            <hr />
+          </div>
+
+          <div class="col-md-3 bold-hr">
+            <hr />
+          </div>
+          <div class="col-md-3 bold-hr">
+            <hr />
+          </div>
+          <div class="col-md-3 bold-hr">
+            <hr />
+          </div>
+        </div>
+      </section>
+
+      <section id="exterior" class="chunk-p-m">
+        <div class="row">
+          <div class="section-heading">Exterior</div>
+
+          <div class="col-md-3">
+            <div>
+              <img
+                src="
+https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/636/original/download_%2810%29.jpg?1752604029"
+                alt="green-room"
+                class="room-image"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div>
+              <img
+                src="
+https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/637/original/download_%289%29.jpg?1752604044"
+                alt="green-room"
+                class="room-image"
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/638/original/tree.jpg?1752604055"
+                alt="green-room"
+                class="room-image"
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/635/original/backyard.jpg?1752603965"
+                alt="green-room"
+                class="room-image"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 bold-hr">
+            <hr />
+          </div>
+
+          <div class="col-md-3 bold-hr">
+            <hr />
+          </div>
+          <div class="col-md-3 bold-hr">
+            <hr />
+          </div>
+          <div class="col-md-3 bold-hr">
+            <hr />
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
